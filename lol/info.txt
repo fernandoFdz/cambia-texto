@@ -1,0 +1,43 @@
+METODOS:
+-------------------------------------------------------------------------------------------------------
+SetDlgItemText
+La función SetDlgItemText establece el título o el texto de un control en un cuadro de diálogo.
+
+BOOL SetDlgItemText (
+   HWND hDlg, // manejador del cuadro de diálogo
+   int nIDDlgItem, // identificador de control
+   LPCTSTR lpString // texto para establecer
+);
+ 
+Parámetros
+hDlg
+Identifica el cuadro de diálogo que contiene el control.
+nIDDlgItem
+Identifica el control con un título o texto que se debe establecer.
+lpString
+Puntero a la cadena terminada en nulo que contiene el texto que se copiará al control.
+Valores de retorno
+Si la función tiene éxito, el valor devuelto es distinto de cero.
+
+Si la función falla, el valor de retorno es cero. Para obtener información extendida sobre el error, llame a GetLastError.
+--------------------------------------------------------------------------------------------------------
+
+GetDlgItemText
+La función GetDlgItemText recupera el título o texto asociado con un control en un cuadro de diálogo.
+
+UINT GetDlgItemText (
+   HWND hDlg, // manejador del cuadro de diálogo
+   int nIDDlgItem, // identificador de control
+   LPTSTR lpString, // dirección del búfer para el texto
+   int nMaxCount // tamaño máximo de la cadena
+);
+ 
+Parámetros
+hDlg
+Identifica el cuadro de diálogo que contiene el control.
+nIDDlgItem
+Especifica el identificador del control cuyo título o texto se va a recuperar.
+lpString
+Puntero al buffer para recibir el título o el texto.
+nMaxCount
+Especifica la longitud máxima, en caracteres, de la cadena que se copiará en el búfer al que apunta lpString. Si la longitud de la cadena excede el límite, la cadena se trunca.
